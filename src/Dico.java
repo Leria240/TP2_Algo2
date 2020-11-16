@@ -54,7 +54,7 @@ public class Dico {
         hashMap = hashMap.entrySet().stream().sorted(HashMap.Entry.comparingByValue(Collections.reverseOrder())).collect(Collectors.toMap(
                 HashMap.Entry::getKey,
                 HashMap.Entry::getValue,
-                (e1, e2) -> e1,
+                (element1, element2) -> element1,
                 LinkedHashMap::new));
 
         return hashMap;
@@ -68,7 +68,7 @@ public class Dico {
         hashMap = hashMap.entrySet().stream().sorted(HashMap.Entry.comparingByValue()).collect(Collectors.toMap(
                 HashMap.Entry::getKey,
                 HashMap.Entry::getValue,
-                (e1, e2) -> e1,
+                (element1, element2) -> element1,
                 LinkedHashMap::new));
 
         return hashMap;
