@@ -147,6 +147,8 @@ public class Dico {
             String line;
 
             while ((line = br.readLine()) != null ) {
+                line = "<" + line + ">";
+                System.out.println(line);
                 words.add(line);
             }
             br.close();
