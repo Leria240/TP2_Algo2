@@ -1,6 +1,6 @@
 public class Levenshtein {
 
-    public int minimum(int suppression, int insertion, int substitution) {
+    public int minimumOperand(int suppression, int insertion, int substitution) {
         return Math.min(Math.min(suppression, insertion), substitution);
     }
 
@@ -12,7 +12,7 @@ public class Levenshtein {
             distance[0][j] = j;
         for (int i = 1; i <= correctWord.length(); i++)
             for (int j = 1; j <= wrongWord.length(); j++)
-                distance[i][j] = minimum(
+                distance[i][j] = minimumOperand(
                         distance[i - 1][j] + 1,
                         distance[i][j - 1] + 1,
                         distance[i - 1][j - 1] + ((correctWord.charAt(i - 1) == wrongWord.charAt(j - 1)) ? 0 : 1));

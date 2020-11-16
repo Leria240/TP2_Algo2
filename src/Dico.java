@@ -153,7 +153,7 @@ public class Dico {
             return words;
 
         } catch (FileNotFoundException e){
-            System.out.println("Le fichier n'existe pas");
+            System.out.println("No file");
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
